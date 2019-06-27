@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Tabletop from 'tabletop';
-import './styles.css'
+import './App.css'
 
  class NPSWidget extends Component {
   constructor() {
