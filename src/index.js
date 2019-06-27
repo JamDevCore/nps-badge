@@ -12,7 +12,7 @@ import './styles.css'
   }
   componentDidMount() {
     const component = this;
-    const { nps, tabletop } = this.props;
+    const { nps, tabletop, totalReviews } = this.props;
     if(nps && totalReviews) {
       this.setState({
         npsScore: nps,
