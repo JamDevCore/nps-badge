@@ -41,17 +41,20 @@ import './styles.css'
         npsScore ? (
           <div className="NPS-Widget">
             <div className="NPS-Widget-Bar-Container">
-              <div className="NPS-Widget-Bar" style={{width: `${npsPercentage}%`}}></div>
+              <div className="NPS-Widget-Bar" style={{width: `${npsPercentage}%`, backgroundImage: ''}}></div>
             </div>
             <div className="NPS-Widget-Details-Container">
-              <div className="NPS-Widget-Score-Container"><h1 className="NPS-Widget-Score">{npsScore}</h1></div>
+              <div className="NPS-Widget-Score-Container">
+                <h1 className="NPS-Widget-Score">{npsScore}</h1></div>
               <div className="NPS-Widget-Text-Container">
                 <h2>Net Promoter Score™</h2>
                 <p>Based on {totalReviews} reviews</p>
               </div>
             </div>
             {logo  && <img src={logo}></img>}
-          </div>) : <p>Loading</p> : null}
+          </div>) : <div className="NPS-Widget-Loading-Container">
+          <div class="lds-facebook"><div></div><div></div><div></div></div>
+        </div> : null}
       </div>
     )
   }
